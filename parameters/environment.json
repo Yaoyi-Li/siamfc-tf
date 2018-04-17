@@ -1,5 +1,5 @@
 {
-	"root_dataset": "data",
+	"root_dataset": "/home/liyaoyi/data",
 	"root_pretrained": "pretrained",
 	"root_parameters": "parameters"
 }
