@@ -72,7 +72,7 @@ def _create_siamese(net_path, net_x, net_z):
     params_names_list, params_values_list = _import_from_matconvnet(net_path)
 
     # loop through the flag arrays and re-construct network, reading parameters of conv and bnorm layers
-    for i in xrange(_num_layers):
+    for i in range(_num_layers):
         print('> Layer '+str(i+1))
         # conv
         conv_W_name = _find_params('conv'+str(i+1)+'f', params_names_list)[0]
@@ -125,9 +125,9 @@ def _import_from_matconvnet(net_path):
     params = net_dot_mat['params']
     params = params[0][0]
     params_names = params['name'][0]
-    params_names_list = [params_names[p][0] for p in xrange(params_names.size)]
+    params_names_list = [params_names[p][0] for p in range(params_names.size)]
     params_values = params['value'][0]
-    params_values_list = [params_values[p] for p in xrange(params_values.size)]
+    params_values_list = [params_values[p] for p in range(params_values.size)]
     return params_names_list, params_values_list
 
 

@@ -79,7 +79,10 @@ def main():
               ' -- IOU: ' + "%.2f" % iou + \
               ' -- Speed: ' + "%.2f" % speed + ' --')
         print()
-
+        
+        with open('bbox.txt', 'w') as f:
+            for bbox in bboxes.astype(np.int):
+                f.write(str(bbox[0])+','+str(bbox[1])+','+str(bbox[2])+','+str(bbox[3])+'\n')
 
 def _compile_results(gt, bboxes, dist_threshold):
     l = np.size(bboxes, 0)

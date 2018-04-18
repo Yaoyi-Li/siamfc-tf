@@ -3,6 +3,6 @@
 	"dist_threshold": 20,
 	"stop_on_failure": 0,
 	"dataset": "cfnet-validation",
-	"video": "vot2016_blanket",
+	"video": "tc_Motorbike_ce",
 	"start_frame": 0
 }
